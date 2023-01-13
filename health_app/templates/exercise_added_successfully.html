@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exercise_added_successfully</title>
+</head>
+<style>
+    .container{
+        background-color: blanchedalmond;
+    }
+    .heading{
+        text-align: center;
+        padding-top: 8vh;
+        font-family: cursive;
+        font-size: xx-large;
+        color: orangered;
+        font-weight: bold;
+    }
+    .time_size{
+        text-align: center;
+        font-size: small;
+    }
+    .item_name{
+        text-align:center;
+        font-size: large;
+        padding-top: 10vh;
+    }
+    .items{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5vh 8vh;
+    }
+    .all_items{
+        text-align: right;
+        padding-top:5vh;
+        padding-right:10vh;
+    }
+</style>
+<body class="container">
+    <div class="all_items">
+        <a class="items" href="/" >Home</a>
+
+        <a class="items" href="/add_activity/">Add Activity</a>
+
+        <a class="items" href="/read_activity/">Read Activity</a>
+
+        <a class="items" href=""> Contact Us</a>
+
+        <a class="items" href="">About Us</a>
+    </div>
+    <div class="heading">
+        <p>Your Exercise is added successfully</p>
+    </div>
+    <div class="item_name">
+        {{ename}}
+    </div> <br>
+    <div class="time_size">
+        {{time}}
+    </div>
+</body>
+</html>

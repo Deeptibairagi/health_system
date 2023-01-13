@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add_exercise</title>
+</head>
+<style>
+    .container{
+        background-color: blanchedalmond;
+    }
+
+    .box{
+        text-align: center;
+        padding-top: 15vh;
+    }
+
+    .add_text{
+        margin:5vh;
+    }
+
+    .btn{
+        text-align : center;
+        align-item: center;
+        background-color: black;
+        border-radius: 2vh;
+        padding:2vh;
+    }
+
+    .btn:hover{
+        background-color: orangered;
+    }
+
+    .btn_text{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+
+    #ename{
+        padding: 2vh;
+        border-radius: 2vh;
+    }
+
+    #elablel{
+        color: orangered;
+        font-family: cursive;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+    .items{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5vh 8vh;
+
+    }
+    .all_items{
+        text-align: right;
+        padding-top:5vh;
+        padding-right:10vh;
+    }
+</style>
+<body class="container">
+<div class="all_items">
+        <a class="items" href="/" >Home</a>
+
+        <a class="items" href="/add_activity/">Add Activity</a>
+
+        <a class="items" href="/read_activity/">Read Activity</a>
+
+        <a class="items" href=""> Contact Us</a>
+
+        <a class="items" href="">About Us</a>
+    </div>
+    <div class="box">
+        <form action="/add_exercise/" method="post">
+            {% csrf_token %}
+            <div class="add_text">
+                <label for="ename" id="elablel">Enter Exercise Name</label><br>
+            </div>
+            <div class="add_text">
+                <input type="text" id="ename" name="ename"><br>
+            </div>
+            <div class="add_text">
+                <button class="btn"><a class="btn_text" >Submit</a>  </button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

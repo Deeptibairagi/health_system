@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add_food_successfully</title>
+</head>
+<style>
+    .container{
+        background-color: blanchedalmond;
+    }
+    .heading{
+        text-align: center;
+        padding-top: 3vh;
+        font-family: cursive;
+        font-size: xx-large;
+        color: orangered;
+        font-weight: bold;
+    }
+    .time_size{
+        text-align: right;
+        font-size: x-small;
+        padding-right: 20vw;
+        padding-bottom: 3vh;
+    }
+    .item_name{
+        text-align:left;
+    }
+    .food_items{
+        margin-left:20vw;
+    }
+    .all_btn{
+        padding-top: 1vh;
+    }
+    .btn{
+        font-size: x-small;
+        margin-right: 3vw;
+        background-color: black;
+        color: white;
+        border-radius: 2vh;
+        text-decoration: none;
+        padding: 1vh 2vh;
+    }
+    .items{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5vh 8vh;
+    }
+    .all_items{
+        text-align: right;
+        padding-top:5vh;
+        padding-right:10vh;
+    }
+</style>
+<body class="container">
+    <div class="all_items">
+        <a class="items" href="/" >Home</a>
+
+        <a class="items" href="/add_activity/">Add Activity</a>
+
+        <a class="items" href="/read_activity/">Read Activity</a>
+
+        <a class="items" href=""> Contact Us</a>
+
+        <a class="items" href="">About Us</a>
+    </div>
+    <div class="heading">
+        <p>Your Food Details:</p>
+    </div>
+    <div class="food_items">
+
+        <ol>{% for i in allFoodName %}
+            <li>
+        <div class="item_name">
+           {{i}}
+        </div>
+        <div class= "all_btn">
+            <a class="btn" href="/update_food/{{i.id}}">Update</a>
+            <a class="btn" href="/delete_food/{{i.id}}">Delete</a>
+        </div>
+        <div class="time_size"> {{time}}</div>
+            </li>
+        {% endfor %}</ol>
+
+    </div>
+</body>
+</html>

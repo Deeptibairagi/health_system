@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update</title>
+</head>
+<style>
+    .container{
+        background-color: blanchedalmond;
+    }
+    .box{
+        text-align: center;
+        padding-top: 15vh;
+    }
+    .add_text{
+        margin:5vh;
+    }
+    .btn{
+        text-align : center;
+        align-item: center;
+        background-color: black;
+        border-radius: 2vh;
+        padding:2vh;
+    }
+    .btn:hover{
+        background-color: orangered;
+    }
+    .btn_text{
+        text-decoration: none;
+        color: white;
+        font-weight: bold;
+    }
+    #fname{
+        padding: 2vh;
+        border-radius: 2vh;
+    }
+    #flablel{
+        color: orangered;
+        font-family: cursive;
+        font-size: xx-large;
+        font-weight: bold;
+    }
+</style>
+<body class="container">
+<div class="box">
+    <form action="/update_food/{{foodtable.id}}" method="POST">
+        {% csrf_token %}
+        <div class="add_text">
+            <label for="fname" id="flablel">Enter Food Name</label>
+        </div>
+        <div class="add_text">
+            <input type="text" id="fname" name="fname">
+        </div>
+        <div class="add_text">
+            <button class="btn"><a class="btn_text" >Submit</a>  </button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

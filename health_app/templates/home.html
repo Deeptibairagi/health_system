@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'index.css' %}">
+</head>
+<style>
+    .container{
+        background-color: blanchedalmond;
+    }
+    .top_heading{
+        text-align: center;
+        padding-top: 15vh;
+        font-family: cursive;
+        color: orangered;
+        font-weight: bold;
+    }
+    .first_para{
+        text-align: center;
+        padding-top: 10vh;
+    }
+    .btn:hover{
+        background-color: orangered;
+    }
+    .items{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        padding: 5vh 8vh;
+    }
+    .all_items{
+        text-align: right;
+        padding-top:5vh;
+        padding-right:10vh;
+    }
+</style>
+<body class="container">
+    <div class="all_items">
+        <a class="items" href="/" >Home</a>
+
+        <a class="items" href="/add_activity/">Add Activity</a>
+
+        <a class="items" href="/read_activity/">Read Activity</a>
+
+        <a class="items" href=""> Contact Us</a>
+
+        <a class="items" href="">About Us</a>
+    </div>
+    <div>
+        <h1 class="top_heading">Health Management system</h1>
+
+        <div class="first_para">
+            <p>This website help you to write your everyday <strong style="font-family: cursive;">
+                Food </strong> (Breakfast Lunch and Dinner) and <strong style="font-family: cursive;">
+                Exersice </strong>(Exersice Timing) details.</p>
+
+            <p>You can also check your previous day meals and exersice details. You have edit option also </p>
+        </div>
+    </div>
+</body>
+</html>
